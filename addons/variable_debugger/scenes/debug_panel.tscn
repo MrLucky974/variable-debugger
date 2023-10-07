@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://1t8rkwu4dr3c"]
+
+[ext_resource type="Script" path="res://addons/variable_debugger/scripts/debug_panel.gd" id="1_7w68l"]
+
+[node name="DebugPanel" type="MarginContainer" node_paths=PackedStringArray("title", "values")]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("1_7w68l")
+title = NodePath("MarginContainer/VBoxContainer/Label")
+values = NodePath("MarginContainer/VBoxContainer/RichTextLabel")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+fit_content = true
+scroll_active = false
+autowrap_mode = 0

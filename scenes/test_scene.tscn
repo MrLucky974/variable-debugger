@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj0m5e6a4xct7"]
+
+[ext_resource type="Script" path="res://scripts/test_node.gd" id="1_c7sg7"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="TestNode" type="Node" parent="."]
+script = ExtResource("1_c7sg7")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
